@@ -1,0 +1,9 @@
+{
+  "name": "nayakstock",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Indian share screen for active stocks with a favourable momentum setup",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

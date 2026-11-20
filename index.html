@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nayakstock — active Indian shares</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@380;480;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="brand">
+        <span class="mark" aria-hidden="true"></span>
+        <div>
+          <p class="eyebrow">NSE watchlist</p>
+          <h1>Nayakstock</h1>
+        </div>
+      </div>
+      <div class="top-meta">
+        <p id="clock">—</p>
+        <button id="refresh" type="button">Refresh</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h2>Where the crowd is active and the setup is favourable</h2>
+        <p class="lede">
+          This board looks at liquid Indian shares and ranks the ones people are actually trading,
+          with price moving up and the trend still supportive. Heavy interest can fade. A high score
+          is a screen, not a forecast that the share will rise.
+        </p>
+      </div>
+      <div class="nifty" id="nifty">
+        <p class="eyebrow">Nifty 50</p>
+        <p class="nifty-price">Loading</p>
+      </div>
+    </section>
+
+    <section class="stats" id="stats"></section>
+
+    <section class="method">
+      <article>
+        <h3>Crowd</h3>
+        <p>Today’s volume versus the last 20 sessions. More shares changing hands means more people are involved.</p>
+      </article>
+      <article>
+        <h3>Buyers</h3>
+        <p>Price up on that heavier volume. Activity alone is not enough if the price is falling.</p>
+      </article>
+      <article>
+        <h3>Trend</h3>
+        <p>Above the 20-day and 50-day averages, with the last week and month also positive.</p>
+      </article>
+      <article>
+        <h3>Room</h3>
+        <p>Near recent highs, but not a vertical spike that is already stretched.</p>
+      </article>
+    </section>
+
+    <div class="toolbar">
+      <div class="filters" role="tablist">
+        <button type="button" class="chip on" data-filter="favourable">Favourable</button>
+        <button type="button" class="chip" data-filter="crowded">Most crowded</button>
+        <button type="button" class="chip" data-filter="all">Full list</button>
+      </div>
+      <label class="search">
+        <span>Search</span>
+        <input id="q" type="search" placeholder="Ticker or company" />
+      </label>
+    </div>
+
+    <p class="banner" id="banner" hidden></p>
+
+    <div class="layout">
+      <div class="list" id="list" aria-live="polite"></div>
+      <aside class="detail" id="detail">
+        <p class="muted">Pick a share to see why it scored.</p>
+      </aside>
+    </div>
+
+    <footer>
+      <p>
+        Prices come from public Yahoo Finance quotes for NSE symbols and can be delayed.
+        Nayakstock does not place orders and is not investment advice. You can lose money.
+        Check the exchange, your broker, and your own research before acting.
+      </p>
+    </footer>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
